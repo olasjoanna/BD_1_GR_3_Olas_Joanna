@@ -1,0 +1,32 @@
+1.Zależności funkcyjne
+id_produktu->nazwa produktu,cena_produktu, VAT
+id_klienta->nazwa_klienta
+id_produktu,data_zamowienia->ilosc,suma_brutto,suma_netto
+
+2.Klucze kandydujące
+dla zamówienia:
+-id_produktu i data_zamowienia
+
+dla produktu:
+-id_produktu
+
+dla klienta: 
+-id_klienta
+-nazwa_klienta
+
+3.Zależności funkcyjne:
+id_pomieszczenia->numer_pomieszczenia,id_budynku,powierzchnia,liczba_okien,liczba_drzwi
+numer_pomieszczenia->id_pomieszczenia,id_budynku,powierzchnia,liczba_okien,liczba_drzwi
+id_budynku->ulica,miasto,kod_pocztowy
+
+
+Klucze kandydujące:
+dla pomieszczenia:
+-numer_pomieszczenia
+-id_pomieszczenia
+
+dla budynku:
+-id_budynku
+
+dla miasta:
+-kod_pocztowy
