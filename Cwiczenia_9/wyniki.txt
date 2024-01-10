@@ -26,3 +26,6 @@
 "                    Index Cond: (territoryid = 5)"
 "Planning Time: 0.338 ms"
 "Execution Time: 5.777 ms"
+
+WNIOSKI
+Porównując wyniki EXPLAIN ANALYSE dla obu QUERY PLAN, możemy zauważyć, że drugi plan wykonawczy wykorzystuje indeks bitmapowy (Bitmap Index Scan) na kolumnie "territoryid" w tabeli "customer", co jest efektywniejszym sposobem filtrowania danych niż zwykłe skanowanie sekwencyjne, jak w pierwszym planie. Ponadto, drugi plan ma krótszy czas wykonania (5.777 ms) w porównaniu do pierwszego (17.158 ms). Dlatego można sformułować wniosek, że drugi plan jest bradziej optymalny.
